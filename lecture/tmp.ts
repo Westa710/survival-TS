@@ -1,8 +1,51 @@
-const num1 = 10;
-const num2 = 10;
-console.log(num1 === num2);
+// let bodyInfo: {
+//   height: number;
+//   weight: number;
+// }
 
-const symbol1 = Symbol("foo");
-const symbol2 = Symbol("foo");
-console.log(symbol1 === symbol1);
-console.log(symbol1 === symbol2);
+// let calculator: {
+//   calcBmi(height: number, weight: number): number;
+// }
+
+
+// bodyInfo = {
+//   height: 1.7,
+//   weight: 55,
+// }
+
+// calculator = {
+//   calcBmi(height, weight) {
+//     return weight / height / height;
+//   }
+// }
+
+// const bmi = calculator.calcBmi(bodyInfo.height, bodyInfo.weight);
+
+// console.log(bmi);
+
+// let obj: {
+//   readonly foo: {
+//     bar: number;
+//   }
+// }
+
+// obj = {
+//   foo: {
+//     bar: 1,
+//   }
+// }
+
+// obj.foo = {bar: 2}
+// // 読み取り専用プロパティであるため、'foo' に代入することはできません。
+
+// obj.foo.bar = 1;
+// // これはコンパイルエラーにならない
+
+// const xy: { x: number; y: number } = { x: 1, y: 2 };
+// let onlyX: { x: number };
+// onlyX = xy;
+// console.log(onlyX);
+
+// let onlyY: { y: number};
+// onlyY = { y: 10 };
+// onlyY = { y: 15, z: 10 };
