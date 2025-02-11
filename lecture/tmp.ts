@@ -49,3 +49,44 @@
 // let onlyY: { y: number};
 // onlyY = { y: 10 };
 // onlyY = { y: 15, z: 10 };
+
+
+type Person = {
+  name: string;
+  bio: {
+    height: number;
+    weight?: number;
+  }
+}
+
+
+const person: Person = {
+  name: "佐藤",
+  bio: {
+    height: 170,
+    weight: 55,
+  }
+}
+
+const person2: Person = {
+  name: "田中",
+  bio: {
+    height: 180,
+    weight: undefined,
+  }
+}
+
+const {
+  bio: { height: hOfSatou, weight: wOfSatou },
+} = person;
+
+const {
+  bio: { height: hOfTanaka = 999, weight: wOfTanaka = 99 },
+} = person2;
+
+console.log(hOfSatou);
+console.log(wOfSatou);
+
+console.log(hOfTanaka);
+console.log(wOfTanaka);
+
