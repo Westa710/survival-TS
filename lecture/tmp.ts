@@ -50,43 +50,84 @@
 // onlyY = { y: 10 };
 // onlyY = { y: 15, z: 10 };
 
+// type Person = {
+//   name: string;
+//   bio: {
+//     height: number;
+//     weight?: number;
+//   }
+// }
 
-type Person = {
-  name: string;
-  bio: {
-    height: number;
-    weight?: number;
-  }
-}
+
+// const person: Person = {
+//   name: "佐藤",
+//   bio: {
+//     height: 170,
+//     weight: 55,
+//   }
+// }
+
+// const person2: Person = {
+//   name: "田中",
+//   bio: {
+//     height: 180,
+//     weight: undefined,
+//   }
+// }
+
+// const {
+//   bio: { height: hOfSatou, weight: wOfSatou },
+// } = person;
+
+// const {
+//   bio: { height: hOfTanaka = 999, weight: wOfTanaka = 99 },
+// } = person2;
+
+// console.log(hOfSatou);
+// console.log(wOfSatou);
+
+// console.log(hOfTanaka);
+// console.log(wOfTanaka);
 
 
-const person: Person = {
-  name: "佐藤",
-  bio: {
-    height: 170,
-    weight: 55,
-  }
-}
+// const person = undefined;
+// console.log(person?.name);
+// // undefined
 
-const person2: Person = {
-  name: "田中",
-  bio: {
-    height: 180,
-    weight: undefined,
-  }
-}
+// // const person = { name: "satou" };
+// const person2 = { name: { first: undefined, last: "takeru" } };
+// console.log(person2?.name?.first);
+// // undefined
 
-const {
-  bio: { height: hOfSatou, weight: wOfSatou },
-} = person;
+// console.log(person2?.name?.last);
+// // takeru
 
-const {
-  bio: { height: hOfTanaka = 999, weight: wOfTanaka = 99 },
-} = person2;
+// const increment = undefined;
+// const result = increment?.(1);
+// console.log(result);
+// // undefined
 
-console.log(hOfSatou);
-console.log(wOfSatou);
+// const increment2 = (n: number) => n + 1;
+// const result2 = increment2?.(1);
+// console.log(result2);
+// // 2
 
-console.log(hOfTanaka);
-console.log(wOfTanaka);
+// const books = undefined;
+// const title = books?.[0];
+// console.log(title);
+// // undefined
 
+// const books2 = ["サバイバルTypeScript"];
+// const title2 = books2?.[0];
+// console.log(title2);
+// // サバイバルTypeScript
+
+// let books3 = undefined;
+// let title3 = books3?.title ?? "デフォルトタイトル";
+// console.log(title3);
+// // デフォルトタイトル
+
+// books3 = { title: "ハンズオンNode.js" };
+// title3 = books3?.title ?? "デフォルトタイトル";
+// console.log(title3);
+// // ハンズオンNode.js
