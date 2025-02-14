@@ -131,3 +131,9 @@
 // title3 = books3?.title ?? "デフォルトタイトル";
 // console.log(title3);
 // // ハンズオンNode.js
+
+const nums: readonly number[] = [1, 2, 3];
+const coppiedNums: number[] = nums;
+
+const nums2: number[] = [1, 2, 3];
+const coppiedNums2: readonly number[] = nums2;
