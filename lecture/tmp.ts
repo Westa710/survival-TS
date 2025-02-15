@@ -132,8 +132,41 @@
 // console.log(title3);
 // // ハンズオンNode.js
 
-const nums: readonly number[] = [1, 2, 3];
-const coppiedNums: number[] = nums;
+// const nums: readonly number[] = [1, 2, 3];
+// const coppiedNums: number[] = nums;
 
-const nums2: number[] = [1, 2, 3];
-const coppiedNums2: readonly number[] = nums2;
+// const nums2: number[] = [1, 2, 3];
+// const coppiedNums2: readonly number[] = nums2;
+
+const arr: number[][] = [[1], [2], [3, 4]];
+const copiedArr: number[][] = [...arr];
+
+// // 2層目にpushすると，元の配列も書き換えられてしまう
+// arr[0].push(10);
+// console.log(copiedArr);
+// // [ [ 1, 10 ], [ 2 ], [ 3, 4 ] ]
+
+// // 1層目にpushすると，その変更は元の配列には影響を与えない
+// const arr2: number[][] = [[5], [6], [7, 8]];
+// const copiedArr2: number[][] = [...arr2];
+// arr.push([20]);
+// console.log(copiedArr2);
+// // [ [ 5 ], [ 6 ], [ 7, 8 ] ]
+
+// function concatOnlyStr(arr: (string | number)[]): string {
+//   let concatenatedStr = "";
+//   for (const elem of arr) {
+//     if(typeof elem === "string"){
+//       concatenatedStr += elem;
+//     }
+//   }
+//   return concatenatedStr;
+// }
+
+// const strAndNum: (string | number)[] = ["Hello, ", 1, "World!", 2];
+// console.log(concatOnlyStr(strAndNum));
+// // Hello, World!
+
+// const strOnly: string[] = ["Alice ", "and ", "Bob"];
+// console.log(concatOnlyStr(strOnly));
+// // Alice and Bob
