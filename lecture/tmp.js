@@ -1,4 +1,3 @@
-"use strict";
 // let bodyInfo: {
 //   height: number;
 //   weight: number;
@@ -106,8 +105,8 @@
 // const coppiedNums: number[] = nums;
 // const nums2: number[] = [1, 2, 3];
 // const coppiedNums2: readonly number[] = nums2;
-const arr = [[1], [2], [3, 4]];
-const copiedArr = [...arr];
+// const arr: number[][] = [[1], [2], [3, 4]];
+// const copiedArr: number[][] = [...arr];
 // // 2層目にpushすると，元の配列も書き換えられてしまう
 // arr[0].push(10);
 // console.log(copiedArr);
@@ -133,3 +132,21 @@ const copiedArr = [...arr];
 // const strOnly: string[] = ["Alice ", "and ", "Bob"];
 // console.log(concatOnlyStr(strOnly));
 // // Alice and Bob
+// //stringかnullのどちらかを返す関数
+// const getName: () => string | null = () => {
+//   return (Math.random() >= 0.5) ? "Alice" : null; 
+// }
+// const maybeName: string | null = getName(); //nullかもしれないのでuserNameに代入したくない
+// const userName: string = maybeName;
+// // 型 'string | null' を型 'string' に割り当てることはできません。
+// // 型 'null' を型 'string' に割り当てることはできません
+// // if文による絞り込み
+// if(typeof maybeName === "string") {
+//   const exactlyUserName: string = maybeName;
+// } else {
+//   console.log("error in getName()");
+// }
+// type TodoStatus = Checked | Unchecked | Deleted;
+// type Checked = { type: "Checked", name: string, id: number };
+// type Unchecked = { type: "Unchecked", name: string, id: number, due: number };
+// type Deleted = { type: "Deleted", name: string };
