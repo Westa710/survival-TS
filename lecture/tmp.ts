@@ -193,3 +193,29 @@
 // type Unchecked = { type: "Unchecked", name: string, id: number, due: number };
 // type Deleted = { type: "Deleted", name: string };
 
+// const value: string | number = "this is a string";
+// const strLength: number = (value as string).length;
+// console.log(strLength);
+// // 16
+
+// const str = "hello" as const;
+// const array = [1, 2, 3] as const;
+// const obj = {
+//   name: "Alice",
+//   age: "20",
+// } as const;
+
+// // obj.name = 30;
+// // 読み取り専用プロパティであるため、'name' に代入することはできません。
+
+// const obj2 = {
+//   name: "Bob",
+//   health: {
+//     weight: 50,
+//     height: 180
+//   }
+// } as const;
+
+// obj2.health.weight = 40;
+// 読み取り専用プロパティであるため、'weight' に代入することはできません
+
